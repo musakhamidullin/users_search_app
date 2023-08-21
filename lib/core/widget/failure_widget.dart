@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class FailureWidget extends StatelessWidget {
-  const FailureWidget({super.key, required this.onTapped});
+  const FailureWidget({super.key, this.onTapped});
 
-  final void Function() onTapped;
+  final void Function()? onTapped;
 
   static const _padding = 16.0;
 
@@ -17,7 +17,7 @@ class FailureWidget extends StatelessWidget {
         const SizedBox(
           height: _padding,
         ),
-        ElevatedButton(onPressed: () {}, child: const Text('Retry'))
+        ElevatedButton(onPressed: () => onTapped?.call(), child: const Text('Retry'))
       ],
     );
   }

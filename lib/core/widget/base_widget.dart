@@ -19,7 +19,7 @@ class BaseWidget extends StatelessWidget {
   final Widget? defaultWidget;
   Widget successWidget;
   final Status status;
-  final VoidCallback? onFailurePressedButton;
+  final void Function()? onFailurePressedButton;
 
   @override
   Widget build(BuildContext context) {
